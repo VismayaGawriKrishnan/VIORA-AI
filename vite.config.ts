@@ -20,8 +20,8 @@ export default defineConfig(({ mode }) => ({
       registerType: "autoUpdate",
       includeAssets: ["favicon.ico", "pwa-icon-192.png", "pwa-icon-512.png"],
       manifest: {
-        name: "Ado Work — Gym & Fitness Tracker",
-        short_name: "Ado Work",
+        name: "VIORA AI — Gym & Fitness Tracker",
+        short_name: "VIORA AI",
         description: "Your ultimate gym companion for workout tracking, diet, and body transformation.",
         theme_color: "#e87a1e",
         background_color: "#111111",

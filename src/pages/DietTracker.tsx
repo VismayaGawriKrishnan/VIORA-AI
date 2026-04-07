@@ -5,7 +5,7 @@ import FoodScanner from "./FoodScanner";
 import { Sparkles, ArrowUp, CheckCircle, AlertTriangle, ChevronLeft, Flame, Camera, Mic, MicOff } from "lucide-react";
 import { useSpeechRecognition } from "@/hooks/useSpeechRecognition";
 
-const API_KEY = 'AIzaSyBQ_fMH_R5TQ6XzuIAU80ITBpgRTZNvZ3c';
+const API_KEY = 'AIzaSyAfU46p1UujMirwq3YQDgWiBIldWnThAt0';
 const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${API_KEY}`;
 const DAILY_GOAL = 2000;
 

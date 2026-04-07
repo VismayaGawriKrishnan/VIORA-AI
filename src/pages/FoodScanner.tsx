@@ -195,7 +195,7 @@ const foodDatabase: Record<string, NutritionResult> = {
 
 // ─── AI Analyzer ─────────────────────────────────────────────────────────────
 
-const AI_KEY = 'AIzaSyBadhsv2lQ1fzW2wY1bVyhv4rVzeM-iRqE';
+const AI_KEY = 'AIzaSyAfU46p1UujMirwq3YQDgWiBIldWnThAt0';
 const AI_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${AI_KEY}`;
 
 const callGeminiVision = async (text: string, base64Data?: string): Promise<NutritionResult> => {
