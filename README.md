@@ -2,7 +2,7 @@
 
 VIORA-AI is an advanced health, fitness, and diet companion platform. Powered by the **Google Gemini API**, it provides users with real-time, context-aware insights, AI-driven food scanning, and personalized wellness plans to elevate their lifestyle.
 
-🔗 **Live Demo:** [https://viorafitness.vercel.app/](https://viorafitness.vercel.app/)
+🔗 **Live Demo:** [https://viorafitness.vercel.app/welcome](https://viorafitness.vercel.app/welcome)
 
 ---
 
