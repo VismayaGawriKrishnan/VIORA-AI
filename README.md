@@ -1,71 +1,48 @@
-# VioraAI — Next-Generation AI Assistant
+# VIORA-AI — Your Comprehensive AI Health & Fitness Companion
 
-> **Hackathon Submission · Problem Statement 4: Next-Generation AI Assistants**
+VIORA-AI is an advanced health, fitness, and diet companion platform. Powered by the **Google Gemini API**, it provides users with real-time, context-aware insights, AI-driven food scanning, and personalized wellness plans to elevate their lifestyle.
 
-VioraAI is a context-aware, multi-domain AI assistant platform powered by **Google Gemini API** — built for education, business, and everyday productivity.
-
-🔗 **Live Demo:** https://viorafitness.vercel.app/
+🔗 **Live Demo:** [https://viorafitness.vercel.app/](https://viorafitness.vercel.app/)
 
 ---
 
-## 🧠 Problem Statement
+## ✨ Key Features
 
-Existing AI tools lack:
-- **Contextual understanding** — conversations feel disconnected and stateless
-- **Adaptability** — rigid responses that ignore user intent or domain
-- **Accessibility** — interfaces too complex for non-technical users
-- **Workflow integration** — single-purpose tools that can't chain actions
+VIORA-AI seamlessly integrates a suite of health and wellness tools into one cohesive experience:
 
-## 💡 Solution — VioraAI
-
-VioraAI closes this gap with a fluid, intelligent assistant that:
-- Maintains **full conversational context** across every message
-- **Adapts its tone and format** based on query type (academic, casual, business)
-- Streams responses **in real time** for a natural, human-like feel
-- Runs on a **zero-friction UI** accessible to all users
-
----
-
-## ✨ Features
-
-| Feature | Description |
-|---|---|
-| 🤖 Contextual AI Chat | Multi-turn conversations with full session memory via Gemini |
-| ⚡ Real-Time Streaming | Token-by-token response streaming for instant feedback |
-| 🎨 Clean UI | shadcn/ui + Tailwind CSS — responsive on mobile and desktop |
-| 🌐 Multi-Domain | Education, business, and everyday use in one assistant |
-| 🚪 Welcome Onboarding | Smooth `/welcome` screen for first-time users |
-| 🔧 TypeScript | Fully typed codebase for reliability and scalability |
-
----
-
-## 🤖 Google AI Usage
-
-### Tools / Models Used
-- **Google Gemini API** — core language model
-- **Gemini Flash / Pro** — optimised for fast multi-turn dialogue
-- **Google AI Studio** — prompt engineering and API key management
-- **Google stitch** - for designing ui and logo
-
-### How AI Is Integrated
-1. **Conversational Engine** — Full chat history is passed to Gemini on every request, enabling coherent multi-turn understanding
-2. **System Prompt Layer** — A carefully engineered system prompt defines VioraAI's persona, tone, and behaviour
-3. **Streaming Responses** — Uses Gemini's streaming API so users see answers forming in real time
-4. **Adaptive Intelligence** — Gemini self-selects response format (bullets, prose, structured) based on query context
+- 🍎 **Intelligent AI Food Scanner:** Leverages Google Gemini Vision API to analyze food images in real-time, accurately identifying meals, estimating calories, and instantly logging dietary intake.
+- 🏋️ **Workout Tracking & Routines:** Explore customized workout plans, including targeted body-part selections (`BodySelector`), detailed workout tracking (`WorkoutTracker`), and progression modeling.
+- 🧘 **AI Posture Coach:** Employs advanced computer vision (`@mediapipe/pose`) integrated with real-time feedback to actively monitor and correct your exercise postures, ensuring maximum safety and workout efficiency.
+- 🥗 **Diet Intelligence:** Get dynamically curated diet plans (`DietPlan`) and deep dietary insights (`DietInsight`) tailored around your fitness goals and recorded daily intake.
+- 😴 **Sleep Scheduler:** Comprehensive tools to build, refine, and track your nighttime routines and sleep schedules to ensure optimal recovery (`SleepSchedule`).
+- 👥 **Community Integration:** Participate in fitness communities, share milestones, and engage with other dedicated users (`Community`).
+- 🎙️ **Hands-Free Voice Logging:** Voice-to-text integration for frictionless meal and routine logging on the go.
 
 ---
 
 ## 🛠️ Tech Stack
 
-| Layer | Technology |
+VIORA-AI is built on a modern, robust web development ecosystem ensuring a smooth, scalable user experience.
+
+| Category | Technology |
 |---|---|
-| Frontend | React 18 + TypeScript |
-| Build Tool | Vite |
-| Styling | Tailwind CSS |
-| UI Components | shadcn/ui |
-| AI Model | Google Gemini API |
-| Package Manager | Bun / npm |
-| Deployment | Vercel |
+| **Frontend** | React 18, TypeScript |
+| **Framework & Build** | Vite |
+| **Styling** | Tailwind CSS |
+| **UI Components** | shadcn/ui (Radix UI primitives) |
+| **AI LLM Engine** | Google Gemini API (`@google/generative-ai`) |
+| **Computer Vision** | MediaPipe (`@mediapipe/camera_utils`, `@mediapipe/pose`) |
+| **Data Visualization**| Recharts |
+| **Routing** | React Router DOM |
+| **Package Manager** | npm / bun |
+
+---
+
+## 🤖 Google AI Integration
+
+VIORA-AI utilizes **Google Gemini** at its core to drive smart features:
+- **Generative Text (Gemini Flash/Pro):** Powers responsive conversational elements, diet plan generation, and intelligent routine adjustments tailored directly to the user's historical context.
+- **Gemini Vision API:** Drives the core **Food Scanner**, actively analyzing visual data to parse ingredients and nutritional info instead of relying on manual entry. 
 
 ---
 
@@ -73,30 +50,36 @@ VioraAI closes this gap with a fluid, intelligent assistant that:
 
 ### Prerequisites
 - Node.js 18+ or Bun
-- A Google Gemini API key from [aistudio.google.com](https://aistudio.google.com)
+- A **Google Gemini API Key**. Get yours at [Google AI Studio](https://aistudio.google.com).
 
-### Installation
+### Installation & Setup
 
-```bash
-# 1. Clone the repo
-git clone [https://github.com/AbhiramJayaraj/adoapps-main-main.git](https://github.com/VismayaGawriKrishnan/adoapps-main-main.git)
-cd adoapps-main-main
+1. **Clone the deployment repository:**
+   ```bash
+   git clone https://github.com/VismayaGawriKrishnan/adoapps-main-main.git
+   cd adoapps-main-main
+   ```
 
-# 2. Install dependencies
-npm install
-# or
-bun install
+2. **Install dependencies:**
+   ```bash
+   npm install
+   # or
+   bun install
+   ```
 
-# 3. Set up environment variables
-echo "VITE_GEMINI_API_KEY=your_api_key_here" > .env
+3. **Configure Environment Variables:**
+   Create a `.env` file in the root directory and add your API key:
+   ```env
+   VITE_GEMINI_API_KEY=your_gemini_api_key_here
+   ```
 
-# 4. Start the dev server
-npm run dev
-```
+4. **Run the local development server:**
+   ```bash
+   npm run dev
+   ```
+   Open `http://localhost:5173` to view the application in the browser!
 
-App runs at `http://localhost:5173`
-
-### Build for Production
+### Building for Production
 ```bash
 npm run build
 npm run preview
@@ -104,55 +87,33 @@ npm run preview
 
 ---
 
-## 📁 Project Structure
+## 📁 Project Structure Highlights
 
 ```
-adoapps-main-main/
-├── public/                  # Static assets
 ├── src/
-│   ├── components/          # Reusable UI components (shadcn/ui)
-│   ├── pages/               # Route-level components
-│   │   ├── Welcome.tsx      # Onboarding screen (/welcome)
-│   │   └── Assistant.tsx    # Main AI chat interface
-│   ├── hooks/               # Custom React hooks
-│   ├── lib/                 # Utility functions & Gemini API helpers
-│   └── main.tsx             # App entry point
-├── index.html
-├── vite.config.ts
-├── tailwind.config.ts
-└── package.json
+│   ├── components/         # Reusable shadcn/ui functional components & AI Modules (e.g., AIPostureCoach)
+│   ├── pages/              # Primary route views (FoodScanner, DietPlan, Workouts, SleepSchedule, etc.)
+│   ├── lib/                # Utilities and core API wrapper configurations (gemini.ts)
+│   ├── hooks/              # Custom application logic (theme, tracking, media processing)
+│   └── main.tsx            # Application entry
+├── public/                 # Static media and app icons
+├── vite.config.ts          # Vite bundler configurations
+└── tailwind.config.ts      # Tailwind theming and branding configurations
 ```
 
 ---
 
 ## 🌍 Deployment
 
-VioraAI is deployed on **Vercel** with zero-config CI/CD.
+VIORA-AI is configured for seamless deployment on Vercel. 
 
+To deploy manually using the Vercel CLI:
 ```bash
-# Deploy via Vercel CLI
 npx vercel --prod
 ```
-
-Or connect your GitHub repo to [vercel.com](https://vercel.com) for automatic deployments on every push.
-
----
-
-## 🧪 Use Cases
-
-- 📚 **Education** — Step-by-step explanations, concept breakdowns, homework assistance
-- 💼 **Business** — Email drafting, document summaries, brainstorming, decision support
-- 🏠 **Everyday** — Quick answers, recommendations, writing help, general knowledge
 
 ---
 
 ## 📄 License
 
-MIT License — open source and free to use.
-
----
-
-<div align="center">
-  Built with React · TypeScript · Tailwind CSS · Google Gemini API<br>
-  <strong>VioraAI — Hackathon Submission, Problem Statement 4</strong>
-</div>
+This project is licensed under the MIT License.
